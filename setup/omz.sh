@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-dots="/home/$USER/archdots"
+dots="/home/$USER/.archdots"
 
 git clone "https://github.com/zsh-users/zsh-autosuggestions.git" "$dots/tmp/zsh-autosuggestions/"
 git clone "https://github.com/zsh-users/zsh-syntax-highlighting.git" "$dots/tmp/zsh-syntax-highlighting/"
