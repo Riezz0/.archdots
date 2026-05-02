@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#Remove Conflicting Files
+# Remove Conflicting Files
 rm -rf /home/$USER/.config/hypr
 rm -rf /home/$USER/.config/kitty
 
@@ -19,8 +19,13 @@ gum style \
     --align center --width 50 --margin "1" --padding "1 2" \
     "󰄶 ARCH DOTFILES" "Automated Stow Sync"
 
-# Get all directories, excluding hidden ones (like .git)
-MODULES=$(find . -maxdepth 1 -type d -not -path '*/.*' -not -path '.' | sed 's|./||')
+# Get all directories, excluding hidden ones, setup, and sys
+MODULES=$(find . -maxdepth 1 -type d \
+    -not -path '*/.*' \
+    -not -path '.' \
+    -not -name 'setup' \
+    -not -name 'sys' \
+    | sed 's|./||')
 
 echo "Starting synchronization..."
 
