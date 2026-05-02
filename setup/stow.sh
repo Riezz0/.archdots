@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+#Remove Conflicting Files
+rm -rf /home/$USER/.config/hypr
+rm -rf /home/$USER/.config/kitty
+
 # Navigate to the dotfiles directory
 cd "$HOME/.archdots" || exit
 
